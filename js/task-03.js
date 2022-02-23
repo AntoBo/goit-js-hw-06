@@ -16,7 +16,7 @@ const images = [
 const galleryEl = document.querySelector('.gallery');
 
 function makeMarkUp(url, alt) {
-  return `<li class='item'><img src=${url} alt=${alt} width=200></li>`;
+  return `<li class='item'><img src='${url}' alt='${alt}' width='200'></li>`;
 }
 
 let markup = '';
@@ -29,7 +29,7 @@ galleryEl.insertAdjacentHTML('afterbegin', markup);
 //CSS styles
 galleryEl.style.display = 'flex';
 galleryEl.style.listStyle = 'none';
-const galleryItemEl = document.querySelectorAll('.gallery li:not(:first-child)');
+const galleryItemEl = document.querySelectorAll('.gallery li');
 galleryItemEl.forEach(el => {
   el.style.marginLeft = '10px';
 });
