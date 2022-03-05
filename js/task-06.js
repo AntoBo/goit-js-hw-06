@@ -6,7 +6,7 @@ function onIntupBlur(event) {
   const validInputLength = Number(event.currentTarget.dataset.length);
   const inputClass = event.currentTarget.classList;
 
-  if (inputLength >= validInputLength) {
+  if (inputLength === validInputLength) {
     inputClass.remove('invalid');
     inputClass.add('valid');
   } else {
